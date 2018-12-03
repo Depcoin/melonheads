@@ -1,5 +1,5 @@
-# BirakeCoin
-Shell script to install a [BirakeCoin Masternode](https://www.birake.com/) on a Linux server running Ubuntu 14.04 or 16.04. Use it on your own risk.
+# MelonHeads
+Shell script to install a [MelonHeads Masternode](https://www.birake.com/) on a Linux server running Ubuntu 14.04 or 16.04. Use it on your own risk.
 
 ***
 ## Installation:
@@ -13,9 +13,9 @@ bash bir-install.sh
 ## Desktop wallet setup
 
 After the MN is up and running, you need to configure the desktop wallet accordingly. Here are the steps for Windows Wallet
-1. Open the BirakeCoin Coin Desktop Wallet.
+1. Open the MelonHeads Coin Desktop Wallet.
 2. Go to RECEIVE and create a New Address: **MN1**
-3. Send **25000** **BirakeCoin** to **MN1**.
+3. Send **25000** **MelonHeads** to **MN1**.
 4. Wait for 15 confirmations.
 5. Go to **Tools -> "Debug console - Console"**
 6. Type the following command: **masternode outputs**
@@ -40,23 +40,23 @@ startmasternode "alias" "0" "MN1"
 
 ## Usage:
 ```
-birakecoin-cli getinfo
-birakecoin-cli mnsync status
-birakecoin-cli masternode status
+MelonHeads-cli getinfo
+MelonHeads-cli mnsync status
+MelonHeads-cli masternode status
 ```
-Also, if you want to check/start/stop **BirakeCoin** , run one of the following commands as **root**:
+Also, if you want to check/start/stop **MelonHeads** , run one of the following commands as **root**:
 
 **Ubuntu 16.04**:
 ```
-systemctl status BirakeCoin #To check the service is running.
-systemctl start BirakeCoin #To start BirakeCoin service.
-systemctl stop BirakeCoin #To stop BirakeCoin service.
-systemctl is-enabled BirakeCoin #To check whetether BirakeCoin service is enabled on boot or not.
+systemctl status MelonHeads #To check the service is running.
+systemctl start MelonHeads #To start MelonHeads service.
+systemctl stop MelonHeads #To stop MelonHeads service.
+systemctl is-enabled MelonHeads #To check whetether MelonHeads service is enabled on boot or not.
 ```
 **Ubuntu 14.04**:  
 ```
-/etc/init.d/BirakeCoin start #To start BirakeCoin service
-/etc/init.d/BirakeCoin stop #To stop BirakeCoin service
-/etc/init.d/BirakeCoin restart #To restart BirakeCoin service
+/etc/init.d/MelonHeads start #To start MelonHeads service
+/etc/init.d/MelonHeads stop #To stop MelonHeads service
+/etc/init.d/MelonHeads restart #To restart MelonHeads service
 ```
 ***
