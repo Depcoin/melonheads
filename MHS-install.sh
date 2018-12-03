@@ -1,13 +1,13 @@
 #!/bin/bash
 
-CONFIG_FILE='MelonHeads.conf'
-CONFIGFOLDER='/root/.MelonHeads'
-COIN_DAEMON='/usr/local/bin/MelonHeadsd'
-COIN_CLI='/usr/local/bin/MelonHeads-cli'
+CONFIG_FILE='melonheads.conf'
+CONFIGFOLDER='/root/.melonheads'
+COIN_DAEMON='/usr/local/bin/melonheadsd'
+COIN_CLI='/usr/local/bin/melonheads-cli'
 COIN_REPO='https://github.com/Depcoin/melonheads/releases/download/linux/linux-mhs.zip'
 #COIN_SNAPSHOT='https://s3.eu-central-1.amazonaws.com/birake-snapshot/snapshot.zip'
-COIN_NAME='MelonHeads'
-COIN_BIN_NAME='MelonHeads'
+COIN_NAME='melonheads'
+COIN_BIN_NAME='melonheads'
 COIN_PORT=4218
 RPC_PORT=4217
 BIND=""
@@ -62,7 +62,7 @@ progressfilt () {
 }
 
 function compile_node() {
-  if [ ! -f "/usr/local/bin/MelonHeadsd" ]; then
+  if [ ! -f "/usr/local/bin/melonheadsd" ]; then
   echo -e "Prepare to download $COIN_NAME"
   TMP_FOLDER=$(mktemp -d)
   cd $TMP_FOLDER
@@ -75,7 +75,7 @@ function compile_node() {
   tar xvzf $COIN_ZIP --strip=2 ${COIN_DIR}/bin/${COIN_BIN_NAME,,}d ${COIN_DIR}/bin/${COIN_BIN_NAME,,}-cli>/dev/null 2>&1
   compile_error
   rm -f $COIN_ZIP >/dev/null 2>&1
-  cp MelonHeads* /usr/local/bin
+  cp melonheads* /usr/local/bin
   compile_error
   strip $COIN_DAEMON $COIN_CLI
   cd -
