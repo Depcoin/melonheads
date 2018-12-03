@@ -329,7 +329,7 @@ function important_information() {
 
 function setup_node() {
   create_config
-  download_snapshot
+ # download_snapshot
   create_key
   update_config
   enable_firewall
